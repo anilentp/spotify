@@ -8,6 +8,10 @@ var access_token = "";
 var token_type = "";
 var expires_in = "";
 
+/*$(document).ready(function(){
+	;
+});*/
+
 function login() {		
 	$.ajax({
 		url: "https://accounts.spotify.com/api/token",
@@ -17,7 +21,8 @@ function login() {
 		},
 		data: {
 			grant_type: "client_credentials",
-		}
+		},
+		async: false
 	}).done(function(data){
 
 		access_token = data.access_token;
@@ -58,7 +63,16 @@ $('#form').submit(function (e) {
 		}
 	}).done(function(data){
 
-		debugger;
+		var canciones = data.tracks.items;
+		var lista = $('#lista_canciones');
+
+		for (var i=0; i<canciones.length; ++i) {
+			var nombre = canciones[i].name;
+			var artista = canciones[i].artists[0].name;
+
+			lista.append('<li>' + nombre + " - " + artista + '</li>');
+
+		}
 
 	}).fail(function(){
 
