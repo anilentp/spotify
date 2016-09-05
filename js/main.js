@@ -3,14 +3,13 @@ var client_id = "16508d14131945baa188c4ec40dd5901";
 var client_secret = "1a41a74419d343ccb72b51302d531980";
 var base64encode = "MTY1MDhkMTQxMzE5NDViYWExODhjNGVjNDBkZDU5MDE6MWE0MWE3NDQxOWQzNDNjY2I3MmI1MTMwMmQ1MzE5ODA="
 
-// variables de retorno
+// variables GLOBALES (todos las pueden ver)
 var access_token = "";
 var token_type = "";
 var expires_in = "";
 
-/*$(document).ready(function(){
-	;
-});*/
+var canciones = [];
+
 
 function login() {		
 	$.ajax({
@@ -37,7 +36,9 @@ function login() {
 	});
 };
 
+
 $('#form').submit(function (e) {
+	// para evitar que el formulario se mande
 	e.preventDefault();
 	var valor = $(this).find('input').val();
 
@@ -49,7 +50,6 @@ $('#form').submit(function (e) {
 	if (access_token == "") {
 		login();
 	}
-	debugger;
 	$.ajax({
 		url: "https://api.spotify.com/v1/search",
 		type: "GET",
@@ -63,14 +63,16 @@ $('#form').submit(function (e) {
 		}
 	}).done(function(data){
 
-		var canciones = data.tracks.items;
+		canciones = data.tracks.items;
 		var lista = $('#lista_canciones');
+		lista.html("");
 
 		for (var i=0; i<canciones.length; ++i) {
 			var nombre = canciones[i].name;
-			var artista = canciones[i].artists[0].name;
+			var id = canciones[i].id; 
+			// var artista = canciones[i].artists[0].name;
 
-			lista.append('<li>' + nombre + " - " + artista + '</li>');
+			lista.append('<li><a href="#modal-descripcion" data-toggle="modal" class="cancion" data-song-id="' + id + '">' + nombre + '</a></li>');
 
 		}
 
