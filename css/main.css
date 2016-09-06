@@ -26,6 +26,7 @@ ul{
 	color: whitesmoke;
 	font-size: 1.3em;
 	list-style: none;
+	display: block;
 }
 .cancion:hover{
 	color:#39A4E7;
