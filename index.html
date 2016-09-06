@@ -10,7 +10,7 @@
 	<link rel="stylesheet" href="css/main.css">
 	<link rel="shortcut icon" href="img/icon.jpg">
 </head>
-<body>
+<body  class="container-fluid bgimg">
 	<!-- M O D A L -->
 	<div class="modal fade" id="modal-descripcion">
 		<div class="modal-dialog">
@@ -40,54 +40,49 @@
 		</div>
 	</div>
 	<!-- M O D A L -->
-	<div class="container-fluid bgimg">
-		<div class="container bg-dark">
-			<header>
-				<div>
-					<h1 class="title">Search Spotify Songs</h1>
+	<div  class="container bg-dark">
+		<header>
+			<div>
+				<h1 class="title">Search Spotify Songs</h1>
+			</div>
+		</header>
+		<section>
+			<div class="row">
+				<div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+					<form class="navbar-form navbar-left" id="form" role="search">
+				  		<div class="form-group">
+				    		<input name="nombre-cancion" type="text" class="form-control" placeholder="Search">
+				  		</div>
+				  		<button type="submit" class="btn btn-default pull-right">Submit</button>
+					</form>
 				</div>
-			</header>
-			<section>
-				<div class="row">
-					<div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
-						<form class="navbar-form navbar-left" id="form" role="search">
-					  		<div class="form-group">
-					    		<input name="nombre-cancion" type="text" class="form-control" placeholder="Search">
-					  		</div>
-					  		<button type="submit" class="btn btn-default pull-right">Submit</button>
-						</form>
+			</div>
+		</section>
+		<section>
+			<div class="row">
+				<div class="col-xs-12 col-sm-7 col-md-7 col-lg-7 list">
+					<h3>Lista de canciones Cargadas</h3>
+					<ul id="lista_canciones"></ul>
+				</div>
+				<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 socialnet pull-right">
+					<!--Facebook-->
+					<div class="fb">
+						<iframe src="https://www.facebook.com/plugins/like.php?href=https://anilentp.github.io/spotify&layout=standard&action=like&size=small&show_faces=true&share=true&height=80&appId"style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+					</div>
+					<!--Google Plus-->
+					<div class="googleplus">
+						<div class="g-plusone" data-annotation="inline" data-width="300" data-href="https://anilentp.github.io/spotify"></div>
+						<div class="g-follow" data-annotation="bubble" data-height="20" data-href="//plus.google.com/u/0/112054059236663047512" data-rel="author"></div>
+					</div>
+					<!--twitter-->
+					<div class="twitter">
+						<a href="https://twitter.com/share" class="twitter-share-button" data-text="Estoy escuchando esta excelente canción" data-hashtags="MusicSpotify" target="_blank">Tweet</a>
 					</div>
 				</div>
-			</section>
-			<section>
-				<div class="row">
-					<div class="col-xs-12 col-sm-7 col-md-7 col-lg-7 list">
-						<h3>Lista de canciones Cargadas</h3>
-						<ul id="lista_canciones"></ul>
-					</div>
-					<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 socialnet pull-right">
-						<!--Facebook-->
-						<div class="fb">
-							<iframe src="https://www.facebook.com/plugins/like.php?href=https://anilentp.github.io/spotify&layout=standard&action=like&size=small&show_faces=true&share=true&height=80&appId"style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
-						</div>
-						<!--Google Plus-->
-						<div class="googleplus">
-							<div class="g-plusone" data-annotation="inline" data-width="300" data-href="https://anilentp.github.io/spotify"></div>
-								
-							<div class="g-follow" data-annotation="bubble" data-height="20" data-href="//plus.google.com/u/0/112054059236663047512" data-rel="author"></div>
-						</div>
-						<!--twitter-->
-						<div class="twitter">
-							<a href="https://twitter.com/share" class="twitter-share-button" data-text="Estoy escuchando esta excelente canción" data-hashtags="MusicSpotify" target="_blank">Tweet</a>
-						</div>
-					</div>
-				</div>
-			</section>
-			<footer>
-				
-			</footer>
-		</div>
+			</div>
+		</section>
 	</div>
+
 <script type="text/javascript" src="js/jquery-3.1.0.min.js"></script>
 <script type="text/javascript" src="js/bootstrap.min.js"></script>
 <script type="text/javascript" src="js/main.js"></script>
