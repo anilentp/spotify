@@ -49,7 +49,7 @@ $('#form').submit(function (e) {
 	if (access_token == "") {
 		login();
 	}
-	debugger;
+
 	$.ajax({
 		url: "https://api.spotify.com/v1/search",
 		type: "GET",

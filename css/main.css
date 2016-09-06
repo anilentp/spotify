@@ -1,3 +1,9 @@
+body{
+	background-image: url(../img/catch_the_beat_by_staredownstudios.jpg);
+	background-size: contain;
+	background-repeat: no-repeat;
+	color: whitesmoke;
+}
 .container{
 	margin:100px;
 }
