@@ -13,6 +13,8 @@
 }
 .list{
 	margin: 2%;
+	font-family: 'Poiret One', cursive;
+	color: whitesmoke;
 }
 .bgimg{
 	background-image: url(../img/maxresdefault.jpg);
